@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "research-figure-kit"
+version = "0.1.0"
+description = "Small Matplotlib helpers for scientific figure sizing and style"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Ned-ma" }]
+dependencies = ["matplotlib>=3.7", "cycler>=0.11"]
+[tool.setuptools.packages.find]
+where = ["src"]
