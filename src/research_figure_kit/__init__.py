@@ -20,6 +20,7 @@ DEFAULT_PALETTE = (
     "#000000",
 )
 
+
 def figure_size(
     width_mm: float = 89.0, height_ratio: float = 0.62
 ) -> tuple[float, float]:
@@ -30,6 +31,7 @@ def figure_size(
         raise ValueError("height_ratio must be greater than zero")
     width_in = width_mm / 25.4
     return width_in, width_in * height_ratio
+
 
 @contextmanager
 def paper_style(
