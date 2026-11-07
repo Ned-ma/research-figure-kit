@@ -1,6 +1,7 @@
 [build-system]
 requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
+
 [project]
 name = "research-figure-kit"
 version = "0.1.0"
@@ -10,5 +11,16 @@ requires-python = ">=3.9"
 license = { file = "LICENSE" }
 authors = [{ name = "Ned-ma" }]
 dependencies = ["matplotlib>=3.7", "cycler>=0.11"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.4,<10", "ruff>=0.17"]
+
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
